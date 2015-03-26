@@ -9,13 +9,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-simple-plugins',
-    version='0.1',
+    version='0.1.3',
     packages=['plugins'],
     include_package_data=True,
     license='MIT License',  # example license
     description='A simple yet powerful and configurable tool for adding plugins to your Django project.',
-    long_description=README,
     url='https://github.com/pistacchio/django-simple-plugins',
+    long_description=README,
     author='Gustavo Di Pietro',
     author_email='pistacchio@gmail.com',
     classifiers=[
