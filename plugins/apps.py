@@ -13,12 +13,12 @@ plugin_list = {}
 
 class PluginsConfig(AppConfig):
     name         = 'plugins'
-    verbose_name = "Django Plugins"
+    verbose_name = "Django Simple Plugins"
 
     def ready(self):
         try:
             if not settings.PLUGINS_DIR:
-                raise Exception('django-plugins: PLUGINS_DIR required in settings.py')
+                raise Exception('django-simple-plugins: PLUGINS_DIR required in settings.py')
 
             # Configure plugins
             plugin_names = [os.path.splitext(d)[0] for d in os.listdir(settings.PLUGINS_DIR) if os.path.splitext(d)[1] == '.py']
@@ -43,10 +43,10 @@ class PluginsConfig(AppConfig):
 
                 # Check plugin validity
                 if not hasattr(plugin_code, 'plugin_type'):
-                    raise Exception('django-plugins: plugin "%s" does not have a plugin_type' % plugin_name)
+                    raise Exception('django-simple-plugins: plugin "%s" does not have a plugin_type' % plugin_name)
 
                 if not hasattr(plugin_code, 'run'):
-                    raise Exception('django-plugins: plugin "%s" does not have a run function' % plugin_name)
+                    raise Exception('django-simple-plugins: plugin "%s" does not have a run function' % plugin_name)
 
                 plugins.plugin_list[plugin_name] = plugin_code
 
