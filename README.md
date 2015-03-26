@@ -1,13 +1,13 @@
-# Django Plugins
+# Django Simple Plugins
 
-Django Plugins is an app for Django that provides a simple yet flexible system to add a plugin layer to your project. Works with Django 1.7
+Django Simple Plugins is an app for Django that provides a simple yet flexible system to add a plugin layer to your project. Works with Django 1.7
 
 ### Installation
 
 Install Django plugins with pip:
 
 ```sh
-pip install django-plugins
+pip install django-simple-plugins
 ```
 
 Add 'plugins' to the list of installed apps in your `settings.py` file:
