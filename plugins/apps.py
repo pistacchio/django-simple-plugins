@@ -23,9 +23,6 @@ class PluginsConfig(AppConfig):
             # Configure plugins
             plugin_names = [os.path.splitext(d)[0] for d in os.listdir(settings.PLUGINS_DIR) if os.path.splitext(d)[1] == '.py']
 
-            # for plugin_dir in plugin_dirs:
-            #     plugin_obj, created = PluginConfiguration.objects.get_or_create(name=plugin_dir)
-
             # Remove from the database the plugins no longer in PLUGIN_DIR
             for plugin_obj in PluginConfiguration.objects.all():
                 if plugin_obj.name not in plugin_names:

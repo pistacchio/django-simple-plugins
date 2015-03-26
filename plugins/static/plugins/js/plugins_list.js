@@ -92,7 +92,10 @@ $(function () {
     } else {
         CodeMirror.fromTextArea(document.getElementById("id_options"), {
             mode: 'javascript'
-        })
+        });
+
+        $('.deletelink-box').hide();
+
     }
 
 });
